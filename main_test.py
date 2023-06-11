@@ -32,7 +32,7 @@ def test_main_200_40():
     datastr = '200 \n 20'
     sys.stdin = io.StringIO(datastr)
 
-    oprice, da, fprice = main.main()
+    original_price, discount_amount, final_price = main.main()
     sys.stdout = sys.__stdout__
     print('Captured\n', captureOut.getvalue())
     lines = captureOut.getvalue().split('\n')
@@ -40,6 +40,6 @@ def test_main_200_40():
     # p = re.compile('[\w,\W]*100[\w,\W]*')
     # res = p.match(lines[0])
     # print(res.group())
-    assert oprice == 200, 'must be 200'
-    assert da == 40, 'must be 40'
-    assert fprice == 160, 'must be 160'
+    assert original_price == 200, 'must be 200'
+    assert discount_amount == 40, 'must be 40'
+    assert final_price == 160, 'must be 160'
