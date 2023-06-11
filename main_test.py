@@ -10,7 +10,7 @@ def test_main_100_20():
     datastr = '100 \n 20'
     sys.stdin = io.StringIO(datastr)
 
-    oprice, da, fprice = main.main()
+    original_price, discount_amount, final_price = main.main()
     sys.stdout = sys.__stdout__
     print('Captured\n', captureOut.getvalue())
     lines = captureOut.getvalue().split('\n')
@@ -21,9 +21,9 @@ def test_main_100_20():
     # res = re.search('100', lines[0])
     # print(res.group())
     # assert res.group() == '100', 'Expected 100'
-    assert oprice == 100, 'must be 100'
-    assert da == 20, 'must be 20'
-    assert fprice == 80, 'must be 80'
+    assert original_price == 100, 'must be 100'
+    assert discount_amount == 20, 'must be 20'
+    assert final_price == 80, 'must be 80'
 
 
 def test_main_200_40():

@@ -5,6 +5,11 @@ def main():
 
     # regular = 100
     # rate = 20
+    """
+    ########################################
+    Code Your Program here
+    ########################################
+    """
 
     discount_amount = 0     # complete this statement to calcualte the discount amount
     final_price = 0         # complete this statement to calculate the final price
